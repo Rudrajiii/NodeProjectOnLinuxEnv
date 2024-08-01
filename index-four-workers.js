@@ -38,7 +38,7 @@ server.get("/blocking" ,async (req , res) => {
     }
     const thread_results = await Promise.all(workerPromises);
     const total = thread_results[0] + thread_results[1] + thread_results[2] + thread_results[3];
-    res.status(200).send("Total Count1:" + total);
+    res.status(200).send("Total Count after threading:" + total);
 
 })
 server.listen(PORT , () => {
